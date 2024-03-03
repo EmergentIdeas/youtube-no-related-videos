@@ -8,6 +8,17 @@ function videoToFront(playerId) {
 	el.style.zIndex = 2
 }
 
+/**
+ * Adds an embedded YouTube video to the page. 
+ * @param {Object} options
+ * @param {string} options.videoHolderSelector The selector for the parent which contains the video and the poster
+ * @param {string} options.playerId The id of the video div, no # (this is how the YouTube api wants it)
+ * @param {int} options.width The width of the video, probably overridden by styles
+ * @param {int} options.height The height of the video, probably overridden by styles
+ * @param {string} options.videoId The youtube id of the video to load
+ * @param {string} options.posterSelector Combined with the videoHolderSelector to determine which element represents the poster
+ * @returns An object which holds the ready state and the player object (when it is eventually set)
+ */
 export default function loadVideo({
 	videoHolderSelector = '.video-holder'
 	, playerId = 'player'
@@ -20,7 +31,6 @@ export default function loadVideo({
 		ready: false
 		, player: null
 	}
-
 
 	let onPlayerStateChange = function (event) {
 		if (event.data == YT.PlayerState.ENDED) {
