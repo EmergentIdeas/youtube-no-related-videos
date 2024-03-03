@@ -1,0 +1,17 @@
+{
+	"name": "@dankolz/youtube-no-related-videos",
+	"version": "1.0.0",
+	"description": "",
+	"main": "client-lib/load-video.mjs",
+	"scripts": {
+		"build-less": "npx lessc less/youtube-no-related-videos.less > demo.css",
+		"demo": "npx http-server -p 3000"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"http-server": "^14.1.1",
+		"less": "^4.2.0"
+	}
+}

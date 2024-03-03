@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./demo.css">
+
+	<style>
+		.youtube-no-related-videos-holder {
+			width: 800px;
+			max-width: 100%;
+			aspect-ratio: 16/9;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="youtube-no-related-videos-holder">
+		<picture class="">
+			<img src="./poster-3.jpg" alt="poster-3" width="843" height="474" style="height: auto">
+		</picture>
+		<div id="player">
+		</div>
+	</div>
+
+	<script type="module">
+		import loadVideo from "./client-lib/load-video.mjs"
+
+		loadVideo({
+			videoId: '71U_UHKSkFg'
+		})
+	</script>
+</body>
+
+</html>
